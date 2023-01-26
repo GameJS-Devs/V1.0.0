@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Source+Sans+Pro&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+#barsMenu,#barsMenuTwo {
+    width: 50px;
+    cursor: pointer;
+}
+
+#menu {
+    margin: 20px 20px 20px -1000px;
+    background-color: black;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    transition: 1s all;
+}
+
+#menu a {
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    display: inline-block;
+    padding: 25px 70px;
+    cursor: pointer;
+}
+
+#searchContent {
+    display: inline-block;
+    padding: 3px 20px;
+    background-color: white;
+    border-radius: 1000px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    border: 1px rgb(167, 167, 167) solid;
+}
+
+#searchContent input {
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+}
+
+#searchContent input:focus {
+    outline: none;
+}
+
+#searchContent img {
+    width: 15px;
+    margin-left: 15px
+}
+
+#title {
+    font-size: 20px;
+    margin-left: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#barsMenuTwo {
+    display: none;
+}
