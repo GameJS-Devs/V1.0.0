@@ -56,3 +56,14 @@ button.addEventListener("click", event => {
 });
 
 //Creamos una funcion y declaramos variables para aparecer los comentarios
+
+function showCommentsFunction(){
+    comentarios.style.bottom = "0px"
+    showComments.style.marginBottom = "80px"
+}
+
+function hiddeCommentFunction(){
+    comentarios.style.bottom = "-1000px"
+    showComments.style.marginBottom = "0px"
+    document.getElementById("comment").value = ""
+}

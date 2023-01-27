@@ -35,11 +35,12 @@
             <input type="text" id="comment" placeholder="Escribir comentario...">
             <button id="send">Comentar</button>
         </div>
-        <div id="contentComments"></div>
     </div>
-    
+    <div id="contentComments">
+        <p id="titleComments">Comentarios</p>
+    </div>
     <div class="commentsShow">
-        <img src="src/chat.png" alt="" id="showComments">
+        <img src="src/chat.png" alt="" id="showComments" onclick="showCommentsFunction()" ondblclick="hiddeCommentFunction()">
     </div>
     <script src="js/index.js"></script>
 </body>

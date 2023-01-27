@@ -121,6 +121,12 @@ body::-webkit-scrollbar {
 
 #content {
    margin: 30px;
+   position: fixed;
+   background-color: white;
+   border-radius: 500px;
+   bottom: -1000px;
+   width: 95%;
+   transition: 1s all;
 }
 
 .icon {
@@ -141,13 +147,29 @@ body::-webkit-scrollbar {
 }
 
 .commentsShow {
-    position: absolute;
+    position: fixed;
     right: 30px;
     bottom: 30px;
+    display: inline-block;
+    
 }
 
 .commentsShow img {
     width: 50px;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
     cursor: pointer;
+    transition: 1s all;
+}
+
+#showCommentsTwo {
+    display: none;
+    transition: 1s all;
+}
+
+#contentComments {
+    margin: 30px;
+    border-left: 1px grey solid;
+    padding: 5px 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+
 }
