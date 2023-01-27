@@ -1,15 +1,58 @@
-let menu = document.getElementById("menu");
-let buttonBars = document.getElementById("barsMenu");
-let buttonBarsTwo = document.getElementById("barsMenuTwo");
+//Creamos un objeto para los comentarios
 
-buttonBars.addEventListener("click", event => {
-    menu.style.marginLeft = "20px";
-    buttonBars.style.display = "none";
-    buttonBarsTwo.style.display = "inline-block";
-})
+function Comment(content){
+    this.content = content;
+    this.class = "commentNew";
+    this.src = "src/icon.jpg"
+};
 
-buttonBarsTwo.addEventListener("click", event => {
-    menu.style.marginLeft = "-1000px";
-    buttonBarsTwo.style.display = "none";
-    buttonBars.style.display = "inline-block";
-})
+//Creamos variables del DOM
+
+let comentarios = document.getElementById("content")
+let showComments = document.getElementById("showComments")
+let inputComment = document.getElementById("comment").value;
+let button = document.getElementById("send");
+let commentContent = document.getElementById("contentComments") 
+
+//Agregamos un evento al botón de comentar
+
+button.addEventListener("click", event => {
+
+    //Creamos una condicional (Si el campo de texto no tiene cotenido mostramos en consola un error, y si tiene, seguimos con la secuencia)
+
+    if(document.getElementById("comment").value === ""){
+        console.log("error NaN");
+    } else {
+
+        //Creamos elemnetos y un objeto (imagen)
+        
+        var comment = new Comment(document.getElementById("comment").value);
+        var icon = new Image()
+        icon.src = "src/icon.jpg";
+        icon.classList.add("icon");
+        var p = document.createElement("span");
+        var name = document.createElement("span");
+        var div = document.createElement("div");
+        var divTwoTop = document.createElement("div");
+        divTwoTop.classList.add("topComment")
+        
+        //Los hacemos aparecer en su respectivo contenedor
+        
+        commentContent.appendChild(divTwoTop)
+        commentContent.appendChild(div)
+        divTwoTop.appendChild(icon)
+        divTwoTop.appendChild(name)
+        div.appendChild(p)
+        name.innerHTML = "Humer";
+        p.innerHTML = comment.content;
+        p.classList.add(comment.class)
+        name.classList.add("name")
+        console.log(p)
+
+        //Limpiamos el campo de texto
+
+        document.getElementById("comment").value = "";
+    }
+});
+
+//Creamos una funcion y declaramos variables para aparecer los comentarios

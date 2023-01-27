@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="nav">
         <img src="src/menuBars.png" alt="" id="barsMenu">
-        <img src="src/menuBars.png" alt="" id="barsMenuTwo">
         <span id="title">WikiLang</span>
+        <div id="menu">
+            <a href="#">Lenguajes</a>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Freamworks</a>
+            <a href="#">Donaciones</a>
+            <a href="#">Ajustes</a>
+        </div>
+        
         <div id="searchContent">
             <div class="align">
                 <input type="text" id="search" placeholder="Buscar...">
@@ -19,13 +28,20 @@
             </div>
         </div>
     </div>
-    <div id="menu">
-        <a href="#">Lenguajes</a><br>
-        <a href="#">Sobre nosotros</a><br>
-        <a href="#">Freamworks</a><br>
-        <a href="#">Donaciones</a><br>
-        <a href="#">Ajustes</a>
+    <div class="infoPage">
+    </div>
+    <div id="content">
+        <div class="commentsCont">
+            <input type="text" id="comment" placeholder="Escribir comentario...">
+            <button id="send">Comentar</button>
+        </div>
+        <div id="contentComments"></div>
+    </div>
+    
+    <div class="commentsShow">
+        <img src="src/chat.png" alt="" id="showComments">
     </div>
     <script src="js/index.js"></script>
 </body>
+
 </html>
