@@ -1,21 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fredoka+One&display=swap');
+
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Fredoka One', cursive;
+
 }
 
 #player {
     width: 10px;
     height: 10px;
-    background: black;
+    background: rgb(255, 0, 0);
     position: absolute;
     z-index: 1;
-    border-radius: 100px;
 }
 
 .fast {
-    width: 100px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background: rgb(123, 123, 123);
     position: absolute;
     border-bottom: 10px;
+}
+
+#plataformaOne {
+    width: 400px;
+    height: 103px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+}
+
+#info {
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
